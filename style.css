@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#333333;
+}
+
+.nav-container{
+    background-color:whitesmoke;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.nav-burger{
+    display: none;
+}
+
+.nav-bar{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+li{
+    padding: 0 5rem;
+}
+
+.nav-bar a:hover{
+    color: teal;
+}
+
+.about-container,
+.service-container, 
+.business-container, 
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.about-container{
+    background-image: url(./images/aleksandar-jason-a562ZEFKW8I-unsplash.jpg);
+
+}
+.service-container{
+    background-image: url(./images/anton-darius-H1ZUlh1lC7Q-unsplash.jpg);
+
+}
+.business-container{
+    background-image: url(./images/dave-hoefler-PDfe7H5GJR0-unsplash.jpg);
+
+}
+.contact-container{
+    background-image: url(./images/eberhard-grossgasteiger-oaQNnRJICA8-unsplash.jpg);
+}
+
+
+@media (max-width:700px){
+
+    .nav-burger{
+        display: block;
+        cursor: pointer;
+        margin: 1rem 2rem;
+    }
+    .nav-bar{
+        position: absolute;
+        background-color: whitesmoke;
+        height: 100vh;
+        width: 40%;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+    }
+    .show{
+        transform: none;
+    }
+
+    .nav-bar ul{
+        flex-direction: column;
+    }
+
+    .nav-bar li{
+        margin: 3rem;
+    }
+
+    .about-container,
+    .service-container,
+    .business-container,
+    .contact-container{
+        z-index: -1;
+    }
+}
